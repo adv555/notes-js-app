@@ -8,7 +8,7 @@
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /notes-js-app/",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run buiid"
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
