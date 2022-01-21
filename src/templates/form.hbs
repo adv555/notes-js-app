@@ -1,0 +1,35 @@
+<div class='modalBackdrop'>
+  <div class='modalContent'>
+    <form class='noteEditor'>
+      <input
+        class='editorInput'
+        type='text'
+        name='name'
+        placeholder='Name'
+        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        title='The name can only consist of letters, apostrophe, dashes, and spaces.'
+        required
+        value={{name}}
+        {{! value='' }}
+      />
+      <select class='editorInput' name='category' value='' required>
+        <option value='' disabled>
+          --Please choose a category--
+        </option>
+        <option value='task'>Task</option>
+        <option value='idea'>Idea</option>
+        <option value='randomThought'>Random Thought</option>
+      </select>
+      <textarea
+        class='noteEditorTextarea'
+        name='message'
+        value={{content}}
+        {{! value='' }}
+        placeholder='your note here..'
+      ></textarea>
+      <button class='noteEditorBtn' type='submit'>
+        Save note
+      </button>
+    </form>
+  </div>
+</div>

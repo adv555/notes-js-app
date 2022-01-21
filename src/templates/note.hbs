@@ -1,0 +1,19 @@
+<tr id={{id}}>
+  <td>{{name}}</td>
+  <td>{{created}}</td>
+  <td>{{category}}</td>
+  <td>{{content}}</td>
+
+  <td>
+    {{#each this}}
+      {{date}}
+    {{/each}}
+  </td>
+
+  <td><button class='iconButton'><i class='fa fa-pencil fa-lg' aria-hidden='true'></i></button></td>
+  <td><button class='iconButton'><i
+        class='fa fa-archive fa-lg'
+        aria-hidden='true'
+      ></i></button></td>
+  <td><button class='iconButton'><i class='fa fa-trash fa-lg' aria-hidden='true'></i></button></td>
+</tr>

@@ -1,0 +1,58 @@
+.container2 {
+  width: 100%;
+  margin: 0;
+  font-weight: 100;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+table {
+  min-width: 700px;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  color: #fff;
+  // border: 1px solid tomato;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th {
+    background-color: $bg-color2;
+  }
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: #cfd8dc;
+      // background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  td {
+    color: black;
+    position: relative;
+  }
+}
+button {
+  cursor: pointer;
+}
+.btn-wrapper {
+  min-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

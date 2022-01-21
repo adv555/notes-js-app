@@ -1,0 +1,29 @@
+<form class='noteEditor'>
+  <input
+    class='editorInput'
+    type='text'
+    name='name'
+    placeholder='Name'
+    pattern="^[a-zA-Z舒-���-亊]+(([' -][a-zA-Z舒-���-亊 ])?[a-zA-Z舒-���-亊]*)*$"
+    title='The name can only consist of letters, apostrophe, dashes, and spaces.'
+    required
+    value={{name}}
+  />
+  <select class='editorInput' name='category' value={{category}} required>
+    <option value='' disabled>
+      --Please choose a category--
+    </option>
+    <option value='task'>Task</option>
+    <option value='idea'>Idea</option>
+    <option value='randomThought'>Random Thought</option>
+  </select>
+  <textarea
+    class='noteEditorTextarea'
+    name='message'
+    value={{message}}
+    placeholder='your note here..'
+  ></textarea>
+  <button class='noteEditorBtn' type='submit'>
+    Save note
+  </button>
+</form>

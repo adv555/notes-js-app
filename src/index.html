@@ -10,12 +10,38 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../node_modules/basiclightbox/dist/basicLightbox.min.css" />
   </head>
   <body>
-    
-    <include src="./partials/example.html"></include>
+    <header class="header header__container--home-bg">
+      <div class="container">
+        <include src="./partials/header.html"></include>
+        <include src="./partials/search.html"></include>
+      </div>
+    </header>
 
-    
+    <main class="main">
+      <section class="container">
+        <include src="./partials/form.html"></include>
+      </section>
+      <section class="container">
+        <include src="./partials/notes.html"></include>
+      </section>
+      <section class="container">
+        <include src="./partials/archive.html"></include>
+      </section>
+    </main>
+
     <script src="./index.js"></script>
   </body>
 </html>
