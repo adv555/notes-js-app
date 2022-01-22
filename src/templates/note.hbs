@@ -1,19 +1,25 @@
-<tr id={{id}}>
+<tr id={{id}} class='note'>
   <td>{{name}}</td>
   <td>{{created}}</td>
   <td>{{category}}</td>
   <td>{{content}}</td>
 
   <td>
-    {{#each this}}
-      {{date}}
+    {{#each dates}}
+      {{this}}
     {{/each}}
   </td>
 
-  <td><button class='iconButton'><i class='fa fa-pencil fa-lg' aria-hidden='true'></i></button></td>
-  <td><button class='iconButton'><i
-        class='fa fa-archive fa-lg'
+  <td class='updateBtn'><button class='iconButton updateBtn'><i
+        class='fa fa-pencil fa-lg updateBtn'
         aria-hidden='true'
       ></i></button></td>
-  <td><button class='iconButton'><i class='fa fa-trash fa-lg' aria-hidden='true'></i></button></td>
+  <td class='archiveBtn'><button class='iconButton archiveBtn'><i
+        class='fa fa-archive fa-lg archiveBtn'
+        aria-hidden='true'
+      ></i></button></td>
+  <td class='deleteBtn'><button class='iconButton deleteBtn'><i
+        class='fa fa-trash fa-lg deleteBtn'
+        aria-hidden='true'
+      ></i></button></td>
 </tr>

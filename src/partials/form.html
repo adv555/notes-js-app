@@ -1,6 +1,6 @@
 <form class="noteEditor" id="form">
   <input
-    class="editorInput"
+    class="editorInput input"
     type="text"
     name="name"
     placeholder="Name"
@@ -9,14 +9,14 @@
     required
     value=""
   />
-  <select class="editorInput" name="category" value="{{category}}" required>
-    <option value="" disabled>--Please choose a category--</option>
-    <option value="task">Task</option>
-    <option value="idea">Idea</option>
-    <option value="randomThought">Random Thought</option>
+  <select class="editorInput select" name="category" value="hello" required>
+    <option value="" disabled selected>--Please choose a category--</option>
+    <option value="Task">Task</option>
+    <option value="Idea">Idea</option>
+    <option value="RandomThought">Random Thought</option>
   </select>
   <textarea
-    class="noteEditorTextarea"
+    class="noteEditorTextarea textarea"
     name="message"
     value=""
     placeholder="your note here.."
