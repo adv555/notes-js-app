@@ -65,8 +65,8 @@ function onArchive(e) {
 refs.notesList.addEventListener('click', onEdit);
 function onEdit(e) {
   e.preventDefault();
-  modalToggle();
   if (e.target.closest('.updateBtn')) {
+    modalToggle();
     const id = e.target.closest('tr').attributes.id.value;
 
     const note = getNoteById(id);
