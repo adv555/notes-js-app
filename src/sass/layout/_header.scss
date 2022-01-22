@@ -1,3 +1,22 @@
+.header__container {
+  background-position: top;
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media screen and (max-width: $max-mobile) {
+    max-width: $max-mobile;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    max-width: $max-tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 100wv;
+  }
+}
+
 header {
   background-color: $bg-color;
   color: $white-color;

@@ -8,7 +8,6 @@ import {
   changeStatus,
   getStatistics,
 } from './functions';
-// import { modalToggle } from './modal';
 
 //  рендерим заметки
 const render = () => {
@@ -35,6 +34,7 @@ function onSubmit(e) {
 
   addNote(name, category, message);
   render();
+  modalToggle();
   refs.form.reset();
 }
 
@@ -65,12 +65,12 @@ function onArchive(e) {
 refs.notesList.addEventListener('click', onEdit);
 function onEdit(e) {
   e.preventDefault();
+  modalToggle();
   if (e.target.closest('.updateBtn')) {
     const id = e.target.closest('tr').attributes.id.value;
-    console.log(id);
 
     const note = getNoteById(id);
-    // console.log(note);
+
     refs.input.value = note.name;
     refs.select.value = '';
     refs.textarea.value = note.content;
@@ -84,6 +84,7 @@ function onEdit(e) {
       const message = refs.textarea.value;
       updateNote(id, name, category, message);
       render();
+      modalToggle();
       refs.form.reset();
       refs.form.removeEventListener('submit', onSave);
       refs.form.addEventListener('submit', onSubmit);
@@ -102,7 +103,6 @@ function modalToggle() {
 // закрытие модалки по ESC/Click
 
 function closeEsc(e) {
-  // console.log(e.code);
   if (e.code === 'Escape') {
     modalToggle();
     document.removeEventListener('keydown', closeEsc);

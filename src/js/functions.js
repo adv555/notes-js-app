@@ -67,8 +67,6 @@ let notes = [
   },
 ];
 
-console.log(notes);
-
 // получаем активные заметки
 export function getActive() {
   return notes
@@ -116,7 +114,7 @@ export const getStatistics = () =>
       }
 
       note.archived ? category.archived++ : category.active++;
-      // console.log(acc);
+
       return acc;
     }, [])
     .map(tplStats)
@@ -125,9 +123,9 @@ export const getStatistics = () =>
 // меняем статус archived
 export const changeStatus = id => {
   const note = notes.find(note => note.id === id);
-  // console.log(note);
   note.archived = !note.archived;
 };
+
 // обновляем  заметку
 export const updateNote = (id, name, category, message) => {
   const note = notes.find(note => note.id === id);
@@ -136,7 +134,6 @@ export const updateNote = (id, name, category, message) => {
   note.category = category;
   note.content = message;
   note.dates = getDates(message);
-  console.log(note);
 };
 
 export const getNoteById = id => {
